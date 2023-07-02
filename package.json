@@ -1,0 +1,17 @@
+{
+  "name": "showlist",
+  "version": "1.0.0",
+  "description": "landing page ",
+  "main": "index.js",
+  "directories": {
+    "sass/main-home.sass":"css/css-home.css"
+  },
+  "scripts": {
+    "compile:sass" : "node-sass sass/main-home.scss css/home-css.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+} 

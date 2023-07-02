@@ -1,0 +1,106 @@
+.popup{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0 ;
+    left: 0;
+    background-color: rgba($color-black, .8);
+    z-index: 5000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &_detail{
+        font-size: 10px;
+        color: $color-grey-dark;
+        text-align: center;
+    }
+
+    &_close{
+        &:link,&:visited{
+            color:$color-grey-dark;
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            text-decoration: none;
+            display: inline-block;
+            transform: all .2s ease;
+
+        }
+    }
+
+    &_content{
+        width: 75%;
+        height: 35rem;
+        background-image: linear-gradient(to right bottom , $color-grey-light-1,$color-grey-dark-2);
+        box-shadow: 0 2rem 4rem rgba($color-black,.3);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 3px;
+        display: table;
+    }
+
+    &_left{
+        width: 25%;
+        display: table-cell;
+        vertical-align: middle;
+        border-right: 1px solid black ;
+        
+    }
+    &_right{
+        width: 85%; 
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 2rem;
+
+    }
+    &_img{
+        display: block;
+        box-shadow: 0 1rem 2rem rgba($color-black, .3);
+        border-radius: 3px;
+        margin-left: 2rem;
+        width: 15vw;
+        
+    }
+
+    &_text{
+        font-family: lato;
+        margin-bottom: 2rem;
+    }
+}
+.btn-popup{
+    background-image: linear-gradient(to right bottom , $color-primary-light,$color-primary-dark);
+    margin-right: 5rem;
+}
+.bgclip{
+    display: inline-block;
+    color: transparent;
+    background-image: linear-gradient(to right bottom,$color_secondary-light,$color-secondary-dark);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+}
+
+.form2{
+&-btn{
+
+&-submit{
+    font-size: 1.6rem;
+    // width: 10rem;
+    font-weight: 500;
+    padding: .5rem 2rem;
+    position: absolute;
+    left: 2rem;
+    background-image: linear-gradient(to right bottom,rgba($color-primary-light, 1) 0%,rgba($color-primary-dark, 0.7) 90%);
+    color: $color-grey-light-1;
+    border:none;
+    border-radius: 20px;
+    cursor: pointer;}
+}}

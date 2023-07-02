@@ -1,0 +1,102 @@
+#form1{
+    position: absolute;
+    top:200px;
+    left:650px;
+
+}
+
+.head-pri{
+    position: absolute;
+    top: -42%;
+    left:75px;
+    
+} 
+
+.head-pri-con{
+    color: transparent;
+    font-size: 70px;
+    display: inline-block;
+    background-image:linear-gradient(to right bottom,rgb(255, 29, 29),
+    rgb(6, 192, 155));
+    -webkit-background-clip: text;
+    
+    background-clip: text;
+}
+ 
+
+.label{
+    padding-left: 40%;
+    font-size: 28px;
+    font-family:'Call Of Ops Duty' ;
+}
+
+input{
+    width: 120%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    opacity: 60%;
+}
+
+input:focus{
+    background-color: aquamarine;
+     ;
+    border: 3px solid rgb(233, 37, 37);
+}
+
+input[type=submit]:focus{
+    background-color: rgb(225, 255, 93);
+    border: 3px solid rgb(17, 233, 114);
+    opacity: 90%;
+}
+input:hover{
+    opacity: 100%;
+    
+}
+input[type=submit]:hover{
+    color:rgb(255, 0, 0);
+}
+
+.box1{
+    font-size: 18px;
+    color:red;
+    font-family:"Call Of Ops Duty";
+}
+.bot_con{
+    justify-content: center;
+    padding-left: 30%;
+    padding-right: 20%;
+    border-radius: 0px;
+    
+}
+
+.labelcon{
+    padding-bottom:5% ;
+    text-decoration: solid;
+}
+
+.box_blur{
+    flex-wrap: nowrap;
+    position: absolute;
+    z-index: -1;
+    border-radius: 40px;
+    left: -20px;
+    bottom: 10px;
+    opacity: 50%;
+    border: 3px solid rgb(0, 0, 0);
+   
+}
+.box_blur:hover{
+    opacity: 90%;
+}
+.box_blur:hover{
+    opacity: 90%;
+}
+
+.button1{
+    font-size: 18px;
+    
+    opacity: 90%;
+}
+
