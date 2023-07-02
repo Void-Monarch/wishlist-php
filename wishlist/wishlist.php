@@ -1,0 +1,38 @@
+<?php
+session_start();
+$uname=$_SESSION['uname'];
+
+function myadd($uname,$c_id,$c_name_pop) {
+
+$connect = mysqli_connect('localhost','root','','db');
+
+$query_select_w = "select * from userlist where username='$uname'";
+$result_select_w = mysqli_query($connect,$query_select_w);
+
+while($row = mysqli_fetch_assoc($result_select_w)){
+
+    if($uname==$row['username']){
+
+            $query_select = "select c_id from userlist where username = '$uname' ";    
+
+
+     $result_select = mysqli_query($connect,$query_select);
+
+
+$row = mysqli_fetch_assoc($result_select);
+$p_c_id=$row['c_id'];
+$c_id_new= $p_c_id.','.$c_id;
+$query_select_add = "update userlist set c_id = '$c_id_new' where username='$uname'";
+$result_select_add = mysqli_query($connect,$query_select_add);
+
+header("Location: ../homepage/home-explore.php#popup_$c_name_pop");
+unset($_SESSION['c_id']);
+
+}}}
+
+$c_id=$_REQUEST['c_id'];
+$c_name_pop=$_REQUEST['c_name_pop'];
+myadd($uname,$c_id,$c_name_pop);
+
+
+?>

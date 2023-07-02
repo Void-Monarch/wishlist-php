@@ -1,0 +1,125 @@
+.card{
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 20rem;
+
+    &_side{
+        height: 40rem;
+        font-size: 1.2rem;
+        font-family: lato;
+        color: $color-white;
+        margin-left: 3rem;
+        // margin-right: 3.5rem;
+        padding-bottom: 5rem;
+        text-align: center;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        position: absolute;
+        top:-15rem; 
+        width: 80%;
+        backface-visibility: hidden;
+        transition: all .8s ease;
+        
+        &--front{
+            background-color: rgb(255, 255, 255);
+
+        }
+
+        &--back{
+            transform: rotateY(180deg);        
+
+            &-1{
+                background-image:linear-gradient(to right bottom,$color-grey-dark-2,rgb(0, 0, 0));
+                padding-top: 20rem;
+            }
+
+            &-2{
+                background-image:linear-gradient(to right bottom,rgb(22, 86, 249),rgb(65, 0, 93));
+                padding-top: 20rem;
+            }
+
+            &-3{
+                background-image:linear-gradient(to right bottom,rgb(247, 61, 250),rgb(80, 3, 157));
+                padding-top: 20rem;
+            }
+        }
+
+    }
+
+    &:hover &_side--front{
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &_side--back{
+        transform: rotateY(0deg); 
+    }
+
+    &_pic{
+        background-size: cover;
+        height: 22rem; 
+        background-blend-mode: screen;
+
+        &--1{
+            background-image: linear-gradient(to right bottom, $color-grey-dark-2,rgb(0, 0, 0)) ,url(../Assests/marvel.webp);
+            -webkit-clip-path: polygon(0 0,100% 0,100% 85%,0 100%); 
+            clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+        }
+
+        &--2{
+            background-image: linear-gradient(to right bottom, rgb(53, 76, 136),rgb(159, 0, 101)) ,url(../Assests/jjk.jfif);
+            -webkit-clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+            clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+        }
+
+        &--3{
+            background-image: linear-gradient(to right bottom, rgb(247, 61, 250),rgb(41, 1, 81)) ,url(../Assests/DAL_v21_Cover.webp);
+            -webkit-clip-path: polygon(0 0,100% 0,100% 85%,0 100%); 
+            clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+        }
+    }
+
+    &_heading{
+        position: absolute;
+        text-align: right;
+        top:13rem;
+        font-family: inherit;
+        font-size: 2.8rem;
+        font-weight: 300;
+        right: 0rem;
+        width: 70%;
+
+
+    }
+
+    &_heading-span{
+        padding: 0rem 1rem;
+        -webkit-box-decoration-break: clone ;
+        box-decoration-break: clone ;
+        &--1{
+            background-image:linear-gradient(to right bottom,$color-grey-dark-2,rgb(0, 0, 0));
+        }
+        &--2{
+            background-image:linear-gradient(to right bottom,rgb(53, 76, 136),rgb(159, 0, 101));
+        }
+        &--3{
+            background-image:linear-gradient(to right bottom,rgb(247, 61, 250),rgb(41, 1, 81));
+        }
+    }
+
+    &_heading-sec{
+        font-family: lato;
+        font-size: 1rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        color: $color-grey-dark-2;
+
+
+    }
+
+}
+.font-cate{
+    color: $color-black;
+}
+ 

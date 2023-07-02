@@ -1,0 +1,209 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+
+
+}
+
+html { 
+scroll-behavior:smooth;
+}
+
+body{
+    padding: 2.5vw;
+    line-height: 5vh;
+    font-family: crafter;
+
+    @include respond(tab-port){
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+}
+.body{
+    &_explore{
+        padding: 2.5vw;
+        padding-top: 5rem;
+        line-height: 5vh;
+        font-family: crafter;
+     
+        @include respond(tab-port){
+            padding-right: 0;
+            padding-left: 0;
+            padding-bottom: 0;
+        }
+        }
+}
+
+a{
+
+    color:inherit;
+    &:link{
+    text-decoration: none;
+    }
+
+    &:visited{
+        text-decoration: none;
+    }
+
+    &:active{
+        text-decoration: none;
+    }
+}
+
+@keyframes bgdisin {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.header{
+    height: 75vh;
+    text-align: center;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right bottom,
+    rgba(81, 252, 69, 0.637),
+    rgba(6, 192, 155, 0.752)),
+    url("../Assests/17.jpg");
+    animation: bgdisin .6s ease-in .1s backwards;
+
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    color: rgb(255, 255, 255);
+
+    clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+}
+
+.header-in{
+    position: absolute;
+    top: 40%;
+    left: 50vw;
+    transform: translateX(-50%);
+    text-align: center;
+    backface-visibility: hidden;
+    
+}
+@keyframes header-mainin{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes header-subin{
+    0%{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateX(-2.3%);
+    }
+}
+
+.header-main{
+    display: block;
+    font-size: 4vw;
+    font-weight: 400;
+    letter-spacing: 33px;
+    animation: header-mainin 1s ease-out .3s backwards;
+
+    @include respond(phone){
+        letter-spacing: 5px;
+    }
+
+}
+
+.header-sub{
+    display: block;
+    font-size: 1.6vw;
+    font-weight: 100;
+    letter-spacing: 9px;
+    transform: translateX(-2.3%);
+    backface-visibility: hidden;
+    animation: header-subin 1s ease-out .6s backwards;
+    
+}
+
+.btn:link,
+.btn:visited{
+    text-decoration: none;
+    text-align: center;
+    padding: 1.5vh 1.5vw;
+    border-radius: 100rem;
+    position: relative;
+    transition: all .2s;
+    display: inline-block;
+    top:10px
+
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+    /* font-size: ; */
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+    
+}
+
+.btn-white{
+    background-color: #ffffff;
+    color: #777;
+}
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+
+}
+.btn::after{
+    background-color: #fff;
+}
+
+.btn:hover::after{
+    transform: scalex(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+@keyframes buttomin{
+    0%{
+        opacity: 0;
+        transform: translatey(100px);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-head-ani{
+    animation: buttomin .5s ease-out 1s backwards;
+}  
